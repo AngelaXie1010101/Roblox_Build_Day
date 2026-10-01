@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roblox Build Day Hackathon</title>
+  <meta name="description" content="Roblox Build Day is a free online hackathon where young Roblox players learn to build their own games in Roblox Studio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Roblox Build Day home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>Build Day</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only">Open navigation</span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="how.html">How It Works</a>
+      <a href="why.html">Why Join</a>
+      <a href="for-schools.html">For Schools</a>
+      <button class="nav-cta" type="button" data-open-register>Sign Up</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Free online challenge for young students</p>
+        <h1>Roblox Build Day Hackathon</h1>
+        <p class="hero-text">Turn game time into build time. Choose a weekend sprint or a guided week, learn Roblox Studio, make a playable experience, and share what you built.</p>
+        <div class="hero-actions">
+          <button class="primary-button" type="button" data-open-register>Register Free</button>
+          <a class="secondary-button" href="how.html">See Formats</a>
+        </div>
+      </div>
+
+      <div class="game-stage" aria-label="A colorful Roblox inspired building scene">
+        <div class="sun"></div>
+        <div class="floating-panel panel-one">START<br>THEME</div>
+        <div class="floating-panel panel-two">FINAL<br>SHOWCASE</div>
+        <div class="avatar">
+          <div class="avatar-head"></div>
+          <div class="avatar-body"></div>
+          <div class="avatar-arm left"></div>
+          <div class="avatar-arm right"></div>
+          <div class="avatar-leg left"></div>
+          <div class="avatar-leg right"></div>
+        </div>
+        <div class="block block-a"></div>
+        <div class="block block-b"></div>
+        <div class="block block-c"></div>
+        <div class="block block-d"></div>
+        <div class="build-platform"></div>
+      </div>
+    </section>
+
+    <section class="info-band">
+      <div class="stat">
+        <strong>Online</strong>
+        <span>Join from home with Roblox Studio</span>
+      </div>
+      <div class="stat">
+        <strong>Weekend Option</strong>
+        <span>Start Saturday, build Sunday, then showcase</span>
+      </div>
+      <div class="stat">
+        <strong>Solo or Team</strong>
+        <span>Build alone or with friends</span>
+      </div>
+    </section>
+
+    <section class="studio-intro" id="roblox-studio">
+      <div>
+        <p class="eyebrow">Roblox Studio basics</p>
+        <h2>Roblox Studio is the free app creators use to build Roblox games.</h2>
+      </div>
+      <p>It runs on Windows and Mac and lets you design 3D worlds, add objects, test your game, and write simple scripts. Build Day starts from zero, so students can join even if they have never coded or opened Studio before.</p>
+      <div class="studio-steps">
+        <article>
+          <span>01</span>
+          <h3>Download</h3>
+          <p>Create or sign in with a Roblox account, open the Roblox Studio setup page, download the installer, then launch Studio.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Use</h3>
+          <p>Start with a template, place parts in the 3D workspace, move and resize objects, then press Play to test your game.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Code</h3>
+          <p>Use beginner Lua scripts to make things happen, like opening doors, adding points, creating obstacles, or reacting to players.</p>
+        </article>
+      </div>
+      <a class="studio-link" href="https://create.roblox.com/docs/studio/setup">Roblox Studio setup guide</a>
+    </section>
+
+    <section class="section-grid">
+      <div>
+        <p class="eyebrow">What is it?</p>
+        <h2>A building challenge for players ready to create.</h2>
+      </div>
+      <div class="feature-list">
+        <article>
+          <span class="feature-icon">01</span>
+          <h3>Start with a theme</h3>
+          <p>Every challenge begins with a creative prompt, examples, and a simple project direction.</p>
+        </article>
+        <article>
+          <span class="feature-icon">02</span>
+          <h3>Make a real game</h3>
+          <p>Students finish with a simple playable project they can improve, show, and feel proud of.</p>
+        </article>
+        <article>
+          <span class="feature-icon">03</span>
+          <h3>Celebrate the build</h3>
+          <p>Finished projects can join an online showcase where builders share what they made and what they learned.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Roblox Build Day is a free online learning challenge for elementary, middle, and high school students.</p>
+    <a href="for-schools.html">For schools</a>
+  </footer>
+
+  <div class="modal" id="register-modal" role="dialog" aria-modal="true" aria-labelledby="register-title" hidden>
+    <div class="modal-backdrop" data-close-register></div>
+    <div class="modal-card">
+      <button class="modal-close" type="button" aria-label="Close registration form" data-close-register>x</button>
+      <h2 id="register-title">Register for Build Day</h2>
+      <p>Enter your details and we will send the challenge theme, schedule, and submission link.</p>
+      <form id="register-form">
+        <label for="student-name">Student name</label>
+        <input id="student-name" name="student-name" type="text" autocomplete="name" required>
+
+        <label for="student-email">Email</label>
+        <input id="student-email" name="student-email" type="email" autocomplete="email" required>
+
+        <label class="checkbox-row" for="email-updates">
+          <input id="email-updates" name="email-updates" type="checkbox">
+          <span>Send me email updates about Build Day.</span>
+        </label>
+
+        <button class="primary-button form-submit" type="submit">Submit Registration</button>
+      </form>
+      <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

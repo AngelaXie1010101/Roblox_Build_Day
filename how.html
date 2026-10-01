@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How It Works | Roblox Build Day</title>
+  <meta name="description" content="Learn how the Roblox Build Day hackathon works and how students can sign up.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Roblox Build Day home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>Build Day</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only">Open navigation</span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="how.html" aria-current="page">How It Works</a>
+      <a href="why.html">Why Join</a>
+      <a href="for-schools.html">For Schools</a>
+      <button class="nav-cta" type="button" data-open-register>Sign Up</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero compact">
+      <p class="eyebrow">How Build Day works</p>
+      <h1>One challenge. A weekend sprint or guided week. One finished Roblox experience.</h1>
+      <p>Roblox Build Day is free, fully online, and made for students who want to try building in Roblox Studio for the first time.</p>
+    </section>
+
+    <section class="beginner-note">
+      <p class="eyebrow">No experience needed</p>
+      <h2>Never coded or used Roblox Studio before? You still belong here.</h2>
+      <p>The program is built for first-time creators. You do not need to know Lua, game design, or Roblox Studio. You will start small, follow guided activities, and learn by making one simple playable experience step by step.</p>
+    </section>
+
+    <section class="timeline">
+      <article>
+        <span>Start</span>
+        <h2>Theme Drops</h2>
+        <p>Get the challenge theme, examples, and a simple starter idea.</p>
+      </article>
+      <article>
+        <span>Learn</span>
+        <h2>Studio Basics</h2>
+        <p>Learn the Studio layout, parts, terrain, models, and testing tools.</p>
+      </article>
+      <article>
+        <span>Build</span>
+        <h2>Core Game</h2>
+        <p>Create the main playable idea: an obstacle, goal, scene, or activity.</p>
+      </article>
+      <article>
+        <span>Polish</span>
+        <h2>Test and Polish</h2>
+        <p>Playtest, fix confusing parts, and add small improvements.</p>
+      </article>
+      <article>
+        <span>Share</span>
+        <h2>Submit</h2>
+        <p>Turn in your project and celebrate it in the online showcase.</p>
+      </article>
+    </section>
+
+    <section class="two-column">
+      <div>
+        <p class="eyebrow">Who can join?</p>
+        <h2>Students from elementary, middle, and high school.</h2>
+        <p>No previous building experience is required. Participants need a Roblox account, access to Roblox Studio, and permission from a parent or guardian when needed.</p>
+      </div>
+      <div class="requirements">
+        <h3>Before kickoff</h3>
+        <ul>
+          <li>Create or confirm a Roblox account.</li>
+          <li>Install Roblox Studio on a computer.</li>
+          <li>Decide whether to build solo or with a small team.</li>
+          <li>Register so you receive challenge updates.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Build solo or with friends, then share your finished Roblox experience in the showcase.</p>
+    <a href="why.html">Why join</a>
+  </footer>
+
+  <div class="modal" id="register-modal" role="dialog" aria-modal="true" aria-labelledby="register-title" hidden>
+    <div class="modal-backdrop" data-close-register></div>
+    <div class="modal-card">
+      <button class="modal-close" type="button" aria-label="Close registration form" data-close-register>x</button>
+      <h2 id="register-title">Register for Build Day</h2>
+      <p>Enter your details and we will send the challenge theme, schedule, and submission link.</p>
+      <form id="register-form">
+        <label for="student-name">Student name</label>
+        <input id="student-name" name="student-name" type="text" autocomplete="name" required>
+
+        <label for="student-email">Email</label>
+        <input id="student-email" name="student-email" type="email" autocomplete="email" required>
+
+        <label class="checkbox-row" for="email-updates">
+          <input id="email-updates" name="email-updates" type="checkbox">
+          <span>Send me email updates about Build Day.</span>
+        </label>
+
+        <button class="primary-button form-submit" type="submit">Submit Registration</button>
+      </form>
+      <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

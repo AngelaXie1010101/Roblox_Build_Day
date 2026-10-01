@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Join | Roblox Build Day</title>
+  <meta name="description" content="See what students learn, build, and win by joining Roblox Build Day.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Roblox Build Day home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>Build Day</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only">Open navigation</span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="how.html">How It Works</a>
+      <a href="why.html" aria-current="page">Why Join</a>
+      <a href="for-schools.html">For Schools</a>
+      <button class="nav-cta" type="button" data-open-register>Sign Up</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero prize-hero">
+      <p class="eyebrow">Why join?</p>
+      <h1>Playing is fun. Building your own world is even better.</h1>
+      <p>Build Day helps students move from consuming games to creating them, while learning design, problem-solving, teamwork, and confidence.</p>
+    </section>
+
+    <section class="learn-grid">
+      <article>
+        <span class="feature-icon">Build</span>
+        <h2>What students make</h2>
+        <p>A simple Roblox experience based on the challenge theme, such as an obby, adventure, hangout space, mini-game, or story world.</p>
+      </article>
+      <article>
+        <span class="feature-icon">Learn</span>
+        <h2>What students learn</h2>
+        <p>Roblox Studio basics, game rules, level design, testing, iteration, creative planning, and how to turn an idea into something playable.</p>
+      </article>
+      <article>
+        <span class="feature-icon">Share</span>
+        <h2>What students gain</h2>
+        <p>A finished project, showcase experience, builder confidence, and a creative achievement they can talk about for school applications.</p>
+      </article>
+    </section>
+
+    <section class="beginner-note confidence-note">
+      <div>
+        <p class="eyebrow">First-time builders welcome</p>
+        <h2>You do not need Roblox Studio experience to join.</h2>
+      </div>
+      <div>
+        <p>If Roblox Studio or coding feels intimidating, that is exactly why Build Day exists. The challenge starts with beginner-friendly activities, simple examples, and small steps so students can learn while they build.</p>
+        <ul class="confidence-list">
+          <li>No prior coding experience is required.</li>
+          <li>No Roblox Studio experience is required.</li>
+          <li>You can build a simple project and improve it as you learn.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="prizes">
+      <div>
+        <p class="eyebrow">Prizes and recognition</p>
+        <h2>Every builder gets a reason to celebrate.</h2>
+        <p>Build Day gives students a clear creative goal and a moment to be recognized for what they made.</p>
+      </div>
+      <div class="prize-list">
+        <article>
+          <h3>Participation Badge</h3>
+          <p>For every student who submits a finished project by the showcase.</p>
+        </article>
+        <article>
+          <h3>Showcase Spotlight</h3>
+          <p>Selected projects are featured during the online showcase.</p>
+        </article>
+        <article>
+          <h3>Category Awards</h3>
+          <p>Recognition for creativity, teamwork, most fun, best beginner build, and strongest use of the theme.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Roblox Build Day turns Roblox players into Roblox creators.</p>
+    <a href="how.html">See how it works</a>
+  </footer>
+
+  <div class="modal" id="register-modal" role="dialog" aria-modal="true" aria-labelledby="register-title" hidden>
+    <div class="modal-backdrop" data-close-register></div>
+    <div class="modal-card">
+      <button class="modal-close" type="button" aria-label="Close registration form" data-close-register>x</button>
+      <h2 id="register-title">Register for Build Day</h2>
+      <p>Enter your details and we will send the challenge theme, schedule, and submission link.</p>
+      <form id="register-form">
+        <label for="student-name">Student name</label>
+        <input id="student-name" name="student-name" type="text" autocomplete="name" required>
+
+        <label for="student-email">Email</label>
+        <input id="student-email" name="student-email" type="email" autocomplete="email" required>
+
+        <label class="checkbox-row" for="email-updates">
+          <input id="email-updates" name="email-updates" type="checkbox">
+          <span>Send me email updates about Build Day.</span>
+        </label>
+
+        <button class="primary-button form-submit" type="submit">Submit Registration</button>
+      </form>
+      <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
