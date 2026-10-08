@@ -36,7 +36,7 @@
       <div class="school-hero-copy">
         <p class="eyebrow">For schools and learning communities</p>
         <h1>Bring game creation into the school day.</h1>
-        <p>Roblox Build Day is a structured, beginner-friendly hackathon program that helps students practice design thinking, digital literacy, collaboration, and computational problem-solving through a playable project they are excited to build.</p>
+        <p>Roblox Build Day is a structured, beginner-friendly hackathon program. The public challenge runs Monday through Friday, and schools can adapt the same learning experience into a school day, weekend sprint, or after-school format.</p>
         <div class="hero-actions">
           <a class="primary-button" href="#school-inquiry">Request Program Packet</a>
           <a class="secondary-button" href="#sample-schedule">View Sample Schedule</a>
@@ -86,46 +86,152 @@
       </article>
     </section>
 
-    <section class="school-section split" id="sample-schedule">
+    <section class="school-section" id="sample-schedule">
       <div>
-        <p class="eyebrow">School-day model</p>
-        <h2>A sample schedule that fits a standard school day.</h2>
-        <p>This format gives students a complete build cycle: introduction, skill practice, guided building, testing, and a short showcase. Schools can run it as one school day, a weekend sprint, or a series of shorter sessions.</p>
+        <p class="eyebrow">Flexible implementation models</p>
+        <h2>Sample schedules for every school format.</h2>
+        <p>Schools can use the full Build Day learning sequence in the format that best fits their calendar: a single school day, a weekend sprint, or shorter after-school sessions.</p>
       </div>
-      <div class="school-schedule">
-        <article>
-          <span>8:30-9:00</span>
-          <div>
-            <h3>Kickoff and Theme Reveal</h3>
-            <p>Introduce the challenge, examples, expectations, and student learning goals.</p>
+
+      <div class="schedule-tabs">
+        <div class="schedule-tab-list" role="tablist" aria-label="School schedule formats">
+          <button class="schedule-tab is-active" id="school-day-tab" type="button" role="tab" aria-selected="true" aria-controls="school-day-panel" data-schedule-tab="school-day-panel">One school day</button>
+          <button class="schedule-tab" id="weekend-tab" type="button" role="tab" aria-selected="false" aria-controls="weekend-panel" data-schedule-tab="weekend-panel">Weekend sprint</button>
+          <button class="schedule-tab" id="sessions-tab" type="button" role="tab" aria-selected="false" aria-controls="sessions-panel" data-schedule-tab="sessions-panel">Shorter sessions</button>
+        </div>
+
+        <article class="schedule-format is-active" id="school-day-panel" role="tabpanel" aria-labelledby="school-day-tab" data-schedule-panel>
+          <div class="schedule-format-header">
+            <p class="eyebrow">One school day</p>
+            <h3>Structured enrichment day</h3>
+            <p>Best for STEM days, advisory programming, digital media classes, or a schoolwide creativity block.</p>
+          </div>
+          <div class="school-schedule compact">
+            <article>
+              <span>8:30-9:00</span>
+              <div>
+                <h4>Kickoff and Theme Reveal</h4>
+                <p>Introduce the challenge, examples, expectations, and learning goals.</p>
+              </div>
+            </article>
+            <article>
+              <span>9:00-10:15</span>
+              <div>
+                <h4>Roblox Studio Mini Lesson</h4>
+                <p>Learn workspace basics, parts, templates, testing, and saving.</p>
+              </div>
+            </article>
+            <article>
+              <span>10:30-12:00</span>
+              <div>
+                <h4>Guided Build Sprint</h4>
+                <p>Create the core of a simple game individually or with a team.</p>
+              </div>
+            </article>
+            <article>
+              <span>1:00-2:00</span>
+              <div>
+                <h4>Test and Improve</h4>
+                <p>Peer test, fix confusing moments, and add small improvements.</p>
+              </div>
+            </article>
+            <article>
+              <span>2:00-2:45</span>
+              <div>
+                <h4>Showcase and Reflection</h4>
+                <p>Demo projects and explain what students built and changed.</p>
+              </div>
+            </article>
           </div>
         </article>
-        <article>
-          <span>9:00-10:15</span>
-          <div>
-            <h3>Roblox Studio Mini Lesson</h3>
-            <p>Learn workspace basics, parts, templates, testing, and saving.</p>
+
+        <article class="schedule-format" id="weekend-panel" role="tabpanel" aria-labelledby="weekend-tab" data-schedule-panel hidden>
+          <div class="schedule-format-header">
+            <p class="eyebrow">Weekend sprint</p>
+            <h3>Two-day build challenge</h3>
+            <p>Best for optional enrichment, district events, or family-supported weekend participation.</p>
+          </div>
+          <div class="school-schedule compact">
+            <article>
+              <span>Sat 9:30</span>
+              <div>
+                <h4>Online Kickoff</h4>
+                <p>Reveal the theme, review rules, and show project examples.</p>
+              </div>
+            </article>
+            <article>
+              <span>Sat 10:00</span>
+              <div>
+                <h4>Studio Basics</h4>
+                <p>Students complete a beginner activity and test a starter scene.</p>
+              </div>
+            </article>
+            <article>
+              <span>Sat 1:00</span>
+              <div>
+                <h4>Build Sprint</h4>
+                <p>Students create the main playable idea and save a first version.</p>
+              </div>
+            </article>
+            <article>
+              <span>Sun 10:00</span>
+              <div>
+                <h4>Polish and Support</h4>
+                <p>Students use tips, tutorials, and examples to improve their games.</p>
+              </div>
+            </article>
+            <article>
+              <span>Sun 2:00</span>
+              <div>
+                <h4>Submission and Showcase</h4>
+                <p>Projects are submitted and highlighted in an online celebration.</p>
+              </div>
+            </article>
           </div>
         </article>
-        <article>
-          <span>10:30-12:00</span>
-          <div>
-            <h3>Guided Build Sprint</h3>
-            <p>Students create the core of a simple game individually or with a small team.</p>
+
+        <article class="schedule-format" id="sessions-panel" role="tabpanel" aria-labelledby="sessions-tab" data-schedule-panel hidden>
+          <div class="schedule-format-header">
+            <p class="eyebrow">Shorter sessions</p>
+            <h3>After-school sequence</h3>
+            <p>Best for clubs, library programs, advisory groups, or classes that meet in shorter blocks.</p>
           </div>
-        </article>
-        <article>
-          <span>1:00-2:00</span>
-          <div>
-            <h3>Test and Improve</h3>
-            <p>Students peer test, fix confusing moments, and add small improvements.</p>
-          </div>
-        </article>
-        <article>
-          <span>2:00-2:45</span>
-          <div>
-            <h3>Showcase and Reflection</h3>
-            <p>Students demo their projects and describe what they built, changed, and learned.</p>
+          <div class="school-schedule compact">
+            <article>
+              <span>Session 1</span>
+              <div>
+                <h4>Theme and Studio Setup</h4>
+                <p>Introduce the challenge and help students open or install Studio.</p>
+              </div>
+            </article>
+            <article>
+              <span>Session 2</span>
+              <div>
+                <h4>Beginner Build Activity</h4>
+                <p>Students learn parts, movement, templates, and playtesting.</p>
+              </div>
+            </article>
+            <article>
+              <span>Session 3</span>
+              <div>
+                <h4>Core Game Build</h4>
+                <p>Students create the goal, obstacle, scene, or activity.</p>
+              </div>
+            </article>
+            <article>
+              <span>Session 4</span>
+              <div>
+                <h4>Improve and Test</h4>
+                <p>Students gather peer feedback and refine the playable experience.</p>
+              </div>
+            </article>
+            <article>
+              <span>Session 5</span>
+              <div>
+                <h4>Share and Reflect</h4>
+                <p>Students present their project and explain what they learned.</p>
+              </div>
+            </article>
           </div>
         </article>
       </div>

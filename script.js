@@ -6,6 +6,8 @@ const closeButtons = document.querySelectorAll("[data-close-register]");
 const registerForm = document.querySelector("#register-form");
 const formMessage = document.querySelector("#form-message");
 const schoolForm = document.querySelector(".school-form");
+const scheduleTabs = document.querySelectorAll("[data-schedule-tab]");
+const schedulePanels = document.querySelectorAll("[data-schedule-panel]");
 let lastFocusedElement = null;
 
 function openModal() {
@@ -63,3 +65,21 @@ if (schoolForm) {
     schoolForm.reset();
   });
 }
+
+scheduleTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const panelId = tab.dataset.scheduleTab;
+
+    scheduleTabs.forEach((item) => {
+      const isSelected = item === tab;
+      item.classList.toggle("is-active", isSelected);
+      item.setAttribute("aria-selected", String(isSelected));
+    });
+
+    schedulePanels.forEach((panel) => {
+      const isSelected = panel.id === panelId;
+      panel.hidden = !isSelected;
+      panel.classList.toggle("is-active", isSelected);
+    });
+  });
+});

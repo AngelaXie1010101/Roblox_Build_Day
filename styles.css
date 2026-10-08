@@ -981,6 +981,64 @@ h3 {
   gap: 12px;
 }
 
+.schedule-tabs {
+  display: grid;
+  gap: 18px;
+  margin-top: 26px;
+}
+
+.schedule-tab-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.schedule-tab {
+  min-height: 42px;
+  flex: 1 1 180px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: var(--text-soft);
+  background: transparent;
+  cursor: pointer;
+  font-family: "Builder Sans", "Montserrat", "Arimo", Arial, sans-serif;
+  font-weight: 900;
+}
+
+.schedule-tab:hover,
+.schedule-tab.is-active {
+  color: var(--white);
+  border-color: rgba(53, 230, 255, 0.42);
+  background: rgba(0, 162, 255, 0.16);
+}
+
+.schedule-format {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.045));
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(14px);
+}
+
+.schedule-format[hidden] {
+  display: none;
+}
+
+.schedule-format-header p:last-child {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
 .school-schedule article {
   display: grid;
   grid-template-columns: 126px minmax(0, 1fr);
@@ -993,6 +1051,16 @@ h3 {
   box-shadow: 0 18px 48px rgba(0, 0, 0, 0.14);
 }
 
+.school-schedule.compact {
+  gap: 10px;
+}
+
+.school-schedule.compact article {
+  grid-template-columns: 84px minmax(0, 1fr);
+  gap: 12px;
+  padding: 14px;
+}
+
 .school-schedule span {
   color: var(--cyan);
   font-family: "Builder Sans", "Montserrat", "Arimo", Arial, sans-serif;
@@ -1000,8 +1068,15 @@ h3 {
   font-weight: 900;
 }
 
-.school-schedule h3 {
+.school-schedule h3,
+.school-schedule h4 {
   margin-bottom: 6px;
+}
+
+.school-schedule h4 {
+  color: var(--white);
+  font-family: "Builder Sans", "Montserrat", "Arimo", Arial, sans-serif;
+  font-size: 1rem;
 }
 
 .lesson-grid {
@@ -1238,7 +1313,8 @@ a:focus-visible {
     min-height: auto;
   }
 
-  .school-schedule article {
+  .school-schedule article,
+  .school-schedule.compact article {
     grid-template-columns: 1fr;
   }
 
